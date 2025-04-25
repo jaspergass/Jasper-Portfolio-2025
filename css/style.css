@@ -1,0 +1,183 @@
+/* ------------ Fonts ------------*/
+
+@font-face {
+    font-family: 'OTMiniature-Regular';
+    src: url('/fonts/OTMiniature-Regular.otf');  
+}
+@font-face {
+    font-family: 'OTMiniature-Bold';
+    src: url('/fonts/OTMiniature-Bold.otf');  
+}
+h1, h2, h3, h4, h5, h6, p{
+    width: fit-content;
+}
+h1{
+    font-family: 'OTMiniature-Regular';
+    font-size: 5em;
+}
+h2{
+    font-family: "Open Sans", sans-serif;
+    font-size: 2.5em;
+    font-weight: 500;
+}
+h3{
+    font-family: 'OTMiniature-Regular';
+    font-size: 2.5em;
+}
+h4{
+    font-family: 'OTMiniature-Regular';
+    font-size: 1.7em;
+}
+h5{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5em;
+}
+h6{
+    font-family: 'OTMiniature-Bold';
+    font-size: 2em;
+}
+p{
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1em;
+}
+
+.arrow{
+    width:1em;
+}
+.social-icon{
+    width:2.5em;
+}
+
+body{
+    background-color: white;
+    cursor: none;
+
+}
+.body-container{
+    margin:2em 18em 6em 18em;
+    gap:2em;
+}
+
+/* ------------ Custom Cursor ------------*/
+
+.cursor {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    transform: translate(-50%, -50%) scale(0.8);
+    
+    background-image: url('../imgs/icons/StarWhite.svg');
+    mix-blend-mode: exclusion;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    pointer-events: none;
+    /* starts off of the page */
+    left:-5em; 
+    top:-5em;
+
+    /* z-index: 1000; */
+
+    transition: transform 350ms ease;
+    transform: translate(-50%, -50%) scale(0.8);
+}
+  
+.custom-cursor--link {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* touch screen no cursor */
+@media (hover: none) and (pointer: coarse){
+    .cursor {
+      display: 'none';
+      background-image: none;
+    }
+}
+a:hover{
+    cursor:none;
+}
+
+/* ------------ Interactive Elements ------------*/
+.button{
+    padding:0.8em;
+    border:solid black 0.1em;
+    border-radius: 0.6em;
+    width:fit-content;
+    gap:0.5em;
+    align-items: center;
+}
+
+/* ------------ Flexbox ------------*/
+
+.flex{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.row{
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+.column{
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.wrap{
+    -webkit-flex-wrap: wrap;   /* Safari 6.1+ */
+    -ms-flex-wrap: wrap;       /* IE 10 */
+    flex-wrap: wrap;
+}
+
+/* ------------ Nav bar ------------*/
+
+/* ------------ Footer ------------*/
+footer{
+    align-items: center;
+    gap:1.4em;
+    border-top: solid black 0.1em;
+    padding: 3em 0em 4em 0em;
+}
+.footer-social-container{
+    gap:3em;
+}
+.footer-social{
+    gap:0.5em;
+    align-items: center;
+}
+
+
+/* ------------ Index page ------------*/
+.index-header{
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.index-left{
+    max-width: 30em;
+    gap:0.5em;
+}
+.index-right{
+    width:fit-content;
+    height:fit-content;
+    gap:0.5em;
+}
+.social-icons{
+ gap:0.5em;
+}
+.card{
+    padding:1.5em;
+    border:solid black 0.1em;
+    border-radius: 0.6em;
+    gap:0.3em;
+}
+.card-tags{
+    justify-content: space-between;
+}
+.card-tags p{
+    background-color:#EEEEEE;
+    padding:0.8em;
+    border-radius:3em;
+}
