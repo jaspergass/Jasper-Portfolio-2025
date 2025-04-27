@@ -8,6 +8,19 @@
     font-family: 'OTMiniature-Bold';
     src: url('/fonts/OTMiniature-Bold.otf');  
 }
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('/fonts/OpenSans-Bold.ttf');  
+}
+@font-face {
+    font-family: 'OpenSans-SemiBold';
+    src: url('/fonts/OpenSans-SemiBold.ttf');  
+}
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('/fonts/OpenSans-Regular.ttf');  
+}
+
 h1, h2, h3, h4, h5, h6, p{
     width: fit-content;
 }
@@ -16,9 +29,9 @@ h1{
     font-size: 5em;
 }
 h2{
-    font-family: "Open Sans", sans-serif;
+    font-family: 'OpenSans-SemiBold', sans-serif;
     font-size: 2.5em;
-    font-weight: 500;
+    letter-spacing:-0.02em;
 }
 h3{
     font-family: 'OTMiniature-Regular';
@@ -29,16 +42,23 @@ h4{
     font-size: 1.7em;
 }
 h5{
-    font-family: "Open Sans", sans-serif;
+    font-family: 'OpenSans-Regular', sans-serif;
     font-size: 1.5em;
+    letter-spacing:-0.02em;
 }
 h6{
     font-family: 'OTMiniature-Bold';
     font-size: 2em;
 }
 p{
-    font-family: "Open Sans", sans-serif;
+    font-family: 'OpenSans-Regular', sans-serif;
     font-size: 1.1em;
+    letter-spacing:-0.02em;
+}
+
+
+img{
+    width:100%;
 }
 
 .arrow{
@@ -105,6 +125,10 @@ a:hover{
     width:fit-content;
     gap:0.5em;
     align-items: center;
+}
+a {
+    text-decoration: none;
+    color:black;
 }
 
 /* ------------ Flexbox ------------*/
