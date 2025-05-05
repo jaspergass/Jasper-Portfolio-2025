@@ -5,43 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- Script -->
-    <script src="/js/script.js" defer></script>
+    <script src="./js/script.js" defer></script>
 </head>
 <body>
     <div class="cursor"></div>
-      
-    <h1>This is H1</h1>
-    <h2>This is H2</h2>
-    <h3>This is H3</h3>
-    <h4>This is H4</h4>
-    <h5>This is H5</h5>
-    <h6>This is H6</h6>
-    <p>This is p</p>
     
-   
+    <nav class="flex">
+        <div class="nav-left">
+            <a href=""><img class="social-icon" src="./imgs/icons/JG-logo.svg"></a>
+        </div>
+        <div class="nav-right flex row">
+            <div class="expanded">
+                <ul>
+                    <li><a href="./index.html">Projects</a></li>
+                    <li><a class="no-underline" href="./html/About.html">About</a></li>
+                    <li><a class="no-underline" href="">Contact</a></li>
+                    <li><a class="no-underline" href="" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+    
+            <div class="condensed">
+                <button id="menu-button" onclick="showMenu()">Menu</button>
+            </div>
+        </div>
+        
+    </nav>
+
+    <div id="menu-content" class="menu-content">
+        <ul>
+          <li><a class="no-underline" href="../index.html">Home</a></li>
+          <li><a class="no-underline" href="https://drive.google.com/file/d/1bfD5HgbXV6hy07dYL-dJvmTxBDVBOuJ2/view?usp=sharing" target="_blank">Resume</a></li>
+          <li><a class="no-underline" href="../html/archive.html">Archive</a></li>
+        </ul>
+    </div>
+
     <div class="body-container flex column">
-         <div class="index-header flex row">
+        <div class="index-header flex row">
             <div class="index-left flex column">
                 <h1>Jasper Gass</h1>
                 <h2>Digital Product Design and Development</h2>
-                <div class="button flex row">
+                <div id="about-me" class="button flex row">
                     <p>More about me</p>
-                    <!-- arrow image -->
                      <img class="arrow" src="./imgs/icons/arrow.svg">
                 </div>
             </div>
-            <div class="index-right flex column">
-                <h6>Say Hello!</h6>
-                <div class="flex row social-icons">
-                    <!-- social media icons -->
-                    
-                    <a href="http://linkedin.com/in/jaspergass" target="_blank" ><img class="social-icon" src="./imgs/icons/linkedin-icon.svg"></a>
-                    <a href="mailto:jaspergass@outlook.com"><img class="social-icon" src="./imgs/icons/email-icon.svg"></a>
-                    <a href="https://www.instagram.com/jaspergass?igsh=MTN6MmpweDMyMHR0Yg%3D%3D&utm_source=qr" target="_blank"><img class="social-icon" src="./imgs/icons/instagram-icon.svg"></a>
+            <div class="index-right flex row">
+                <div id="about-me-mobile" class="button flex row">
+                    <p>More about me</p>
+                     <img class="arrow" src="./imgs/icons/arrow.svg">
                 </div>
+                <div class="flex column say-hello">
+                    <h6>Say Hello!</h6>
+                    <div class="flex row social-icons">
+                        <a href="http://linkedin.com/in/jaspergass" target="_blank" ><img class="social-icon" src="./imgs/icons/linkedin-icon.svg"></a>
+                        <a href="mailto:jaspergass@outlook.com"><img class="social-icon" src="./imgs/icons/email-icon.svg"></a>
+                        <a href="https://www.instagram.com/jaspergass?igsh=MTN6MmpweDMyMHR0Yg%3D%3D&utm_source=qr" target="_blank"><img class="social-icon" src="./imgs/icons/instagram-icon.svg"></a>
+                    </div>
+                </div>
+               
             </div>
         </div>
         
@@ -102,6 +126,14 @@
         </a>
 
     </div>
+
+    <h1>This is H1</h1>
+    <h2>This is H2</h2>
+    <h3>This is H3</h3>
+    <h4>This is H4</h4>
+    <h5>This is H5</h5>
+    <h6>This is H6</h6>
+    <p>This is p</p>
     
     <footer class="flex column">
         <h3>Let’s Connect!</h3>

@@ -41,3 +41,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     initCursor = false;
   };
 });
+
+// Collapsed menu
+function showMenu() {
+  var menucontent = document.getElementById("menu-content");
+
+  var button = document.getElementById("menu-button");
+  if (menucontent.style.display === "none") {
+    menucontent.style.display = "block";
+    button.innerHTML = "Close";
+  } else {
+    menucontent.style.display = "none";
+    button.innerHTML = "Menu";
+  }
+}
