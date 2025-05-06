@@ -12,27 +12,208 @@
 </head>
 <body>
     <div class="cursor"></div>
-      
+    
+    <nav class="flex">
+        <div class="nav-left">
+            <a href="../index.html"><img class="social-icon" src="../imgs/icons/JG-logo.svg"></a>
+        </div>
+        <div class="nav-right flex row">
+            <div class="expanded">
+                <ul>
+                    <li><a href="../index.html">Projects</a></li>
+                    <li><a class="no-underline" href="../html/About.html">About</a></li>
+                    <li><a class="no-underline" href="">Contact</a></li>
+                    <li><a class="no-underline" href="" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+    
+            <div class="condensed">
+                <button id="menu-button" onclick="showMenu()">Menu</button>
+            </div>
+        </div>
+        
+    </nav>
+    <div id="menu-content" class="menu-content">
+        <ul>
+          <li><a class="no-underline" href="../index.html">Home</a></li>
+          <li><a class="no-underline" href="https://drive.google.com/file/d/1bfD5HgbXV6hy07dYL-dJvmTxBDVBOuJ2/view?usp=sharing" target="_blank">Resume</a></li>
+          <li><a class="no-underline" href="../html/archive.html">Archive</a></li>
+        </ul>
+    </div>
+
     <div class="body-container flex column">
         
         <picture> 
             <source srcset="../imgs/playtested-imgs/PlaytestedMockup.jpg" media="(min-width: 600px)"> 
-            <img src="../imgs/playtested-imgs/PlaytestedMockup-m.jpg" alt="Mockup on laptop" loading=“lazy” decoding=“async”> 
+            <img class="rounded-corner" src="../imgs/playtested-imgs/PlaytestedMockup-m.jpg" alt="Mockup on laptop" loading=“lazy” decoding=“async”> 
         </picture>
 
-        <div class="flex column">
+        <div class="flex column body-item">
             <h4>Playtested.</h4>
             <h2>One platform to track, rate, and collect your favorite board games.</h2>
             <p>Playtested is a web-based platform for board game enthusiasts to rate, review, and collect their
                  favorite games. Designed for both casual players and collectors, the site supports community 
                  interaction through game discussions, comment threads, and personalized collections.</p>
         </div>
-        
+       
+        <div class="flex row overview-container">
+            <div class="flex column overview-item">
+                <h5>My Role</h5>
+                <p>Lead designer, Front end developer</p>
+            </div>
+            <div class="flex column overview-item">
+                <h5>Team</h5>
+                <p>Wallace Chau - Lead back end developer</p>
+            </div>
+            <div class="flex column overview-item">
+                <h5>Timeline</h5>
+                <p>Mar-Apr 2025</p>
+            </div>
+            <div class="flex column overview-item">
+                <h5>Tools</h5>
+                <p>PHP, SQL, JavaScript, Figma, HTML/CSS</p>
+            </div>
+        </div>
+
+        <div class="flex column body-item">
+            <h4>The Problem</h4>
+            <p>Board game enthusiasts often navigate a cluttered landscape of disjointed resources, like forums, 
+                databases, and review sites, that can be overwhelming or overly complex. Existing platforms tend to
+                 prioritize feature bloat over usability, making it difficult to simply browse, track, and share opinions
+                  on games.</p>
+
+            <p>We set out to create a focused, user-friendly alternative: A clean platform that makes it easy to
+                 discover games, leave feedback, and organize personal collections—without the noise.</p>
+        </div>
+
+        <hr>
+
+        <div class="flex column body-item">
+            <h4>Data Architecture</h4>
+
+            <p>Before any pixels were pushed, we dedicated two full weeks to planning our database—because for
+                 a platform like this, structure is everything.</p>
+
+            <p>We began by identifying key entities: Users, Board Games, Comments, and Collections. From there, 
+                we built a detailed ER diagram that mapped out relationships like anonymous commenting, many-to-many
+                 connections between games and user collections, and support for future scalability.</p>
+
+            <p>Designing the database early allowed us to:</p>
+
+            <ul>
+                <li>Support anonymous and registered interactions seamlessly</li>
+                <li>Enable dynamic content rendering across pages (e.g. game detail, user collections)</li>
+                <li>Keep performance smooth, even as data grows</li>
+            </ul>
+
+            <p>This foundation shaped the entire user experience. With the data structured properly, features 
+                like sorting comments by usefulness or filtering games by player count became effortless to 
+                implement—both technically and from a UI standpoint.</p>
+        </div>
+
+        <hr>
+
+        <div class="flex column body-item">
+            <h4>Design</h4>
+
+            <p>Guided by a minimalist philosophy, I designed a clean, modern grid layout accented with a single bold 
+                colour. This approach emphasized readability and game imagery, allowing users to quickly scan 
+                content without visual clutter.</p>
+
+            <p>Simplicity wasn’t just aesthetic—it was strategic. A streamlined layout made the interface easier
+                to adapt responsively across mobile and desktop, and helped us stay on track with development 
+                given our tight timeline. The result: a visually focused experience that balanced form, 
+                function, and feasibility.</p>
+        </div>
+
         <picture> 
             <source srcset="../imgs/playtested-imgs/PlaytestedStyleGuide.jpg" media="(min-width: 600px)"> 
-            <img src="../imgs/playtested-imgs/laytestedStyleGuide-m.jpg" alt="Style guide" loading=“lazy” decoding=“async”> 
+            <img class="rounded-corner border" src="../imgs/playtested-imgs/laytestedStyleGuide-m.jpg" alt="Style guide" loading=“lazy” decoding=“async”> 
         </picture>
 
+        <hr>
+
+        <div class="flex column body-item">
+            <h4>Key Features</h4>
+
+            <h5>Search Functionality</h5>
+            <p>The site supports robust filtering options, allowing users to search for games using various inputs 
+                such as name, category, or average play time. Results are paginated to maintain a clean and navigable
+                 layout, minimizing visual clutter and improving performance.</p>
+
+            <h5>Dynamic Game Pages</h5>
+            <p>Each game page presents detailed information, including the year of publication and designer.
+                 Logged-in users can engage further by leaving comments, submitting ratings, and adding games
+                  to personalized collections. Features like comment editing and real-time rating updates are 
+                  handled smoothly using AJAX for a seamless user experience.</p>
+
+            <h5>Custom Collections</h5>
+            <p>Users can create and manage themed collections, such as “Strategy Favorites” or “Best for Game Night," 
+                to organize their favorite board games. This feature adds a layer of personalization and helps users
+                 curate content based on their preferences.</p>
+
+            <h5>User Profiles</h5>
+            <p>Each profile highlights a user’s recent activity and showcases their custom collections. Basic user
+                 stats are also displayed, giving users a quick snapshot of their engagement and contributions to the
+                  platform.</p>
+        </div>
+
+        <hr>
+
+        <div class="flex column body-item">
+            <h4>Challenges</h4>
+
+            <h5>1. Database Design & SQL Optimization</h5>
+
+            <p>Choosing the right database was critical to the success of this project, and we dedicated two weeks 
+                to selecting and refining a database structure. The most significant challenge was ensuring the data
+                 could be stored efficiently and retrieved quickly. We worked extensively on the ER diagram to store
+                  information effectively, reducing redundant data where we could and building with querying in mind.</p>
+            
+            <h5>2. Implementing AJAX for Smooth User Experience</h5>
+
+            <p>One of the biggest technical challenges was implementing AJAX, which was a new concept for both of us.
+                 We wanted users to be able to browse games, leave comments, and submit ratings without full page 
+                 reloads. Learning how to send asynchronous requests, update DOM elements dynamically, and debug 
+                 JavaScript responses—all while maintaining the integrity of our SQL data—was a steep learning curve.
+                  Initially, even small tasks like displaying a new comment without reloading the page were difficult.
+                   We had to experiment and iterate often, but once we grasped the basics, we were able to 
+                   significantly enhance the user experience by reducing page reloads and making interactions feel 
+                   faster and more modern.</p>
+            
+            <h5>3. Time Management & Streamlining Development</h5>
+
+            <p>Given the limited project timeline, time management was a constant challenge. From designing the 
+                database schema to creating the front-end user interface and ensuring all features were implemented 
+                and tested, it was crucial to focus on a minimalist approach to avoid feature creep. We kept a clear
+                 set of priorities, ensuring the most important features—user accounts, game reviews, and ratings—were
+                  functioning properly before we added additional enhancements. This approach allowed us to balance
+                   between delivering a polished product and adhering to the project’s time constraints.</p>
+        </div>
+
+        <hr>
+        
+        <div class="flex column body-item">
+            <h4>Reflection</h4>
+
+            <p>This project was not only a deep dive into web development and database design — it was also a lesson 
+                in collaboration, problem-solving, and scoping a project realistically. From selecting and cleaning
+                 a dataset to designing an intuitive user experience, every step required intentional decisions and 
+                 trade-offs.</p>
+
+            <p>Working as both a designer and developer pushed me to think about how interface choices would impact
+                 our codebase, and vice versa. I gained a better understanding of how important early planning is, 
+                 especially when it comes to data architecture. The time we invested in building a solid ER diagram
+                  and setting up our database structure made later stages much smoother.</p>
+
+            <p>Looking back, I’m proud of how much we were able to accomplish with a small team and tight timeline.
+                 There are definitely features I’d love to build on in the future, like game recommendations and 
+                 richer filtering, but this version of Playtested achieves exactly what we set out to do: create 
+                 a clean, user-first platform for sharing and organizing board games.</p>
+            
+                <!-- ADD LINK TO REPORT! -->
+            <p>You can find a more in-depth report about this project here</p>
+        </div>
     </div>
     
     <footer class="flex column">

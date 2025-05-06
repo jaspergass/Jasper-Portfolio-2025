@@ -61,6 +61,7 @@ p{
     /* font-size: 1.1em; */
     font-size:calc(0.6em + 0.6vw);
     letter-spacing:-0.02em;
+    line-height: 1.4;
 }
 li{
     font-family: 'OpenSans-SemiBold', sans-serif;
@@ -71,22 +72,32 @@ li{
 img{
     width:100%;
 }
-
+.rounded-corner{
+    border-radius: 0.6em;
+}
+.border{
+    border: solid black 0.1em;
+}
 .arrow{
     width:1em;
 }
 .social-icon{
     width: calc(2em + 0.6vw);
 }
-
+hr{
+    border-top: solid black 0.1em;
+    width:100%;
+}
 body{
     background-color: white;
     cursor: none;
-
 }
 .body-container{
     margin: 6em 20vw 6em 20vw;
     gap:2em;
+}
+.body-item{
+    gap:1em;
 }
 @media(max-width:60em){
 	.body-container{
@@ -340,4 +351,16 @@ footer{
     .index-right{
         justify-content: space-between;
     }
+}
+
+.overview-container{
+    padding:2em 0em 2em 0em;
+    border-top: solid black 0.1em;
+    border-bottom: solid black 0.1em;
+    gap:2em;
+}
+
+.overview-item{
+    gap:1em;
+    flex:1;
 }
