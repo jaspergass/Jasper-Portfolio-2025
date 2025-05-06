@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jasper Gass - Arcana Mini</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Script -->
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+    <div class="cursor"></div>
+    
+    <nav class="flex">
+        <div class="nav-left">
+            <a href="../index.html"><img class="social-icon" src="../imgs/icons/JG-logo.svg"></a>
+        </div>
+        <div class="nav-right flex row">
+            <div class="expanded">
+                <ul>
+                    <li><a href="../index.html">Projects</a></li>
+                    <li><a class="no-underline" href="../html/About.html">About</a></li>
+                    <li><a class="no-underline" href="">Contact</a></li>
+                    <li><a class="no-underline" href="" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+    
+            <div class="condensed">
+                <button id="menu-button" onclick="showMenu()">Menu</button>
+            </div>
+        </div>
+        
+    </nav>
+    <div id="menu-content" class="menu-content">
+        <ul>
+          <li><a class="no-underline" href="../index.html">Home</a></li>
+          <li><a class="no-underline" href="https://drive.google.com/file/d/1bfD5HgbXV6hy07dYL-dJvmTxBDVBOuJ2/view?usp=sharing" target="_blank">Resume</a></li>
+          <li><a class="no-underline" href="../html/archive.html">Archive</a></li>
+        </ul>
+    </div>
+
+    <div class="body-container flex column">
+        
+        <picture> 
+            <source srcset="../imgs/arcana-mini-imgs/ArcanaMini-mockup.jpg" media="(min-width: 600px)"> 
+            <img class="rounded-corner" src="../imgs/arcana-mini-imgs/ArcanaMini-mockup-m.jpg" alt="Mobile app mockup" loading=“lazy” decoding=“async”> 
+        </picture>
+
+        <div class="flex column body-item">
+            <h4>Arcana Mini</h4>
+            <h2>A calming digital companion for tarot reflection.</h2>
+            <p>Arcana Mini is a mobile app concept designed to complement a reader’s personal tarot deck,
+                 allowing users to look up card meanings and journal their spreads. I originally developed 
+                 the idea and created an Android prototype for a class project in 2023. Later, I had the opportunity
+                  to reimagine the experience through Surge, our campus developer club, where I led a team of four 
+                  first-time React Native developers.</p>
+            <p>As the project lead, I was responsible for the concept, UX/UI design, prototyping, and team coordination.
+                 Although we faced technical challenges and were unable to complete the app in React Native, I 
+                 delivered a fully interactive prototype in Figma that brought the vision to life and guided 
+                 future development.</p>
+        </div>
+       
+        <div class="flex row overview-container">
+            <div class="flex column overview-item">
+                <h5>My Role</h5>
+                <p>Team Lead, Sole UI/UX Designer</p>
+            </div>
+            <div class="flex column overview-item">
+                <h5>Deliverables</h5>
+                <p>Figma prototype</p>
+            </div>
+            <div class="flex column overview-item">
+                <h5>Timeline</h5>
+                <p>Oct-Feb 2024</p>
+            </div>
+            <div class="flex column overview-item">
+                <h5>Tools</h5>
+                <p>Figma, FigJam, GitHub</p>
+            </div>
+        </div>
+
+        <div class="flex column body-item">
+            <h4>Design Process</h4>
+            <h5>Information Architecture</h5>
+            <p>A key part of the planning process was mapping out the app’s structure and user flow. To do this, 
+                we created a site map in FigJam that outlined all the screens and how they connect. This visualization
+                 helped clarify the app’s functional needs and served as a foundation for building the final Figma
+                  prototype.</p>
+
+            <h5>Aesthetic Experimentation</h5>
+            <p>Initially, I planned to reuse the design from a previous prototype and focus on development. But 
+                after receiving critique, I realized this was a chance to create a visual identity that better fit 
+                the app’s purpose.</p>
+            <p>The first iteration featured a bold, boxy style I found visually interesting, but it didn’t align with
+                 the calm, reflective purpose of the app. </p>
+            <p>The next version moved toward a softer, more modern look—one that felt more approachable and emotionally
+                 supportive. This process taught me how important it is for design to reflect the emotional context of 
+                 a product, especially one centered around personal reflection.</p>
+            <p>I also learned the importance of designing with modern devices in mind. Early on, I was designing based 
+                on the dimensions of my own phone, which has a much smaller screen than most current devices. As a 
+                result, I wasn't accounting for how the app would adapt to larger screens, and many users would have
+                 ended up with a very different experience—one I hadn’t intentionally designed. Realizing this pushed
+                  me to consider responsive layouts more seriously and ensure the design felt consistent and intentional
+                   across devices.</p>
+            
+        </div>
+
+        <hr>
+
+        <div class="flex column body-item">
+            <h4>Key Features</h4>
+
+            <div class="flex row">
+                <div class="flex column body-item">
+                    <h5>Journal Reflections</h5>
+                    <p>After each reading, users are prompted to capture a photo of their tarot spread, followed by 
+                        space to write a personal reflection. Special options allow users to timestamp the entry with
+                         today’s date or backdate it for past readings. This flexible flow makes it easy to log 
+                         meaningful moments without pressure—just snap, reflect, and save.</p>
+                </div>
+                <!-- VIDEO! -->
+            </div>
+            <div class="flex row">
+                <div class="flex column body-item">
+                    <h5>Reflection Calendar</h5>
+                    <p>This page offers two tabs: a calendar view and a list view. In the calendar view, users 
+                        can browse by month, with highlighted dates indicating days with saved reflections. Tapping
+                         a date filters the list below to show only entries from that day. The list view presents 
+                         all reflections as cards, grouped by month, with a search bar for quick access. Each 
+                         reflection card displays a photo preview (if added), the date, title, and a text 
+                         snippet, making it easy to revisit past readings and observe emotional patterns over time.</p>
+                </div>
+                <!-- VIDEO! -->
+            </div>
+            <div class="flex row">
+                <div class="flex column body-item">
+                    <h5>Card Lookup</h5>
+                    <p>Quickly search or browse the full 78‑card tarot deck. Each card page shows concise upright
+                         and reversed meanings so readers can spend less time flipping through guidebooks and more
+                          time interpreting the spread.</p>
+                </div>
+                <!-- VIDEO! -->
+            </div>
+            <div class="flex row">
+                <div class="flex column body-item">
+                    <h5>Methodology Library</h5>
+                    <p>A dedicated “Why & How” hub explains tarot fundamentals—shuffle rituals, common spreads, 
+                        card‑pair relationships, and ethical reading tips. Clear, bite‑sized articles let beginners 
+                        build confidence while giving seasoned readers a handy reference they can dip into between
+                         sessions.</p>
+                </div>
+                <!-- VIDEO! -->
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="flex column body-item">
+            <h4>Challenges</h4>
+
+            <h5>1. Learning React Native</h5>
+            <p>This project came with its fair share of challenges—technical, logistical, and interpersonal. One 
+                of the biggest hurdles was working with React Native, the framework we chose so the app could 
+                run on both iOS and Android. It seemed like a great opportunity for the team to learn something new,
+                 but the learning curve turned out to be steeper than expected. All four developers were brand new
+                  to React Native and, despite their enthusiasm, the lack of familiarity significantly slowed down 
+                  progress. Eventually, the technical demands outpaced what the team could handle within our timeframe.</p>
+            
+            <h5>2. Communication & Time Management</h5>
+            <p>Another key challenge was team coordination and communication. Since this was one of the first 
+                collaborative projects for many team members, we were all navigating how to work together
+                 effectively while also learning new tools and technologies. Unfortunately, differences in 
+                 experience with project planning and time management led to a mismatch in expectations. While 
+                 I had anticipated the complexity and workload involved in a project of this scale, others found 
+                 it more difficult to balance alongside their existing commitments. Despite these hurdles, the 
+                 experience taught me a lot about adapting in real-time, communicating across disciplines, and 
+                 stepping into a leadership role when needed.</p>
+        </div>
+
+        <hr>
+        
+        <div class="flex column body-item">
+            <h4>Reflection</h4>
+
+            <p>Although we weren’t able to deliver a working React Native app by the end of the project, this 
+                experience became a valuable lesson in leadership, adaptability, and the importance of making 
+                the most of your individual strengths. As the only designer on the team—and someone with prior
+                 experience in team-based projects—I naturally stepped into a leadership role. I took initiative
+                  in organizing meetings, keeping momentum going, and trying to keep the project on track, even 
+                  when it became clear that many team members were struggling to keep up due to other commitment
+                  s and the technical demands of learning React Native.</p>
+
+            <p>When progress stalled on the development side, I made the conscious decision to pivot the project 
+                toward what I could accomplish independently. I put my focus into redesigning the app, iterating
+                 on UI and UX decisions, and building a complete interactive prototype in Figma. It wasn’t the
+                  outcome I initially envisioned, but it allowed me to bring the core vision of the app to life 
+                  and provided a strong foundation for future development—whether I return to it solo or with a 
+                  new team. More importantly, it taught me how to respond when things don’t go according to plan:
+                   with resilience, creativity, and a deepened trust in my own skills.</p>
+
+            <!-- ADD LINK TO PROTOTYPE! -->
+            <p>You can find the working figma prototype here: </p>
+        </div>
+    </div>
+    
+    <footer class="flex column">
+        <h3>Let’s Connect!</h3>
+        <div class="flex row footer-social-container">
+            <a href="http://linkedin.com/in/jaspergass" target="_blank" >
+                <div class="flex row footer-social">
+                    <img class="social-icon" src="../imgs/icons/linkedin-icon.svg">
+                    <h5>linkedin.com/in/jaspergass</h5>
+                </div>
+            </a>
+            <a href="mailto:jaspergass@outlook.com">
+                <div class="flex row footer-social">
+                    <img class="social-icon" src="../imgs/icons/email-icon.svg">   
+                    <h5>jaspergass@outlook.com</h5>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/jaspergass?igsh=MTN6MmpweDMyMHR0Yg%3D%3D&utm_source=qr" target="_blank">
+                <div class="flex row footer-social">
+                    <img class="social-icon" src="../imgs/icons/instagram-icon.svg">
+                    <h5>jaspergass</h5>
+                </div>
+            </a>
+        </div>
+        <div class="flex row footer-social">
+            <p>designed and developed by</p>
+            <img class="social-icon" src="../imgs/icons/JG-logo.svg">
+            <p>using Figma, HTML, CSS, JS</p>
+        </div>
+    </footer>
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
