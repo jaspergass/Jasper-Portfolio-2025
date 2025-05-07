@@ -45,14 +45,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 // Collapsed menu
 function showMenu() {
   var menucontent = document.getElementById("menu-content");
+  var menuIcon = document.getElementById("menu-icon");
+  var menuClose = document.getElementById("menu-close");
 
-  var button = document.getElementById("menu-button");
-  if (menucontent.style.display === "none") {
+  var isHidden = window.getComputedStyle(menucontent).display === "none";
+  if (isHidden) {
     menucontent.style.display = "block";
-    button.innerHTML = "Close";
+    menuClose.style.display = "block";
+    menuIcon.style.display = "none";
   } else {
     menucontent.style.display = "none";
-    button.innerHTML = "Menu";
+    menuClose.style.display = "none";
+    menuIcon.style.display = "block";
   }
 }
 
