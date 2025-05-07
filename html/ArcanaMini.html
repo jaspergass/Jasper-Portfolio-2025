@@ -49,8 +49,10 @@
         </picture>
 
         <div class="flex column body-item">
-            <h4>Arcana Mini</h4>
-            <h2>A calming digital companion for tarot reflection.</h2>
+            <div class="card-title flex column">
+                <h4>Arcana Mini</h4>
+                <h2>A calming digital companion for tarot reflection.</h2>
+            </div>
             <p>Arcana Mini is a mobile app concept designed to complement a reader’s personal tarot deck,
                  allowing users to look up card meanings and journal their spreads. I originally developed 
                  the idea and created an Android prototype for a class project in 2023. Later, I had the opportunity
@@ -85,6 +87,11 @@
             </div>
         </div>
 
+        <picture> 
+            <source srcset="../imgs/arcana-mini-imgs/ArcanaMiniMockup.jpg" media="(min-width: 600px)"> 
+            <img class="rounded-corner" src="../imgs/arcana-mini-imgs/ArcanaMiniMockup-m.jpg" alt="Mobile app mockup" loading=“lazy” decoding=“async”> 
+        </picture>
+
         <div class="flex column body-item">
             <h4>Design Process</h4>
             <h5>Information Architecture</h5>
@@ -92,13 +99,25 @@
                 we created a site map in FigJam that outlined all the screens and how they connect. This visualization
                  helped clarify the app’s functional needs and served as a foundation for building the final Figma
                   prototype.</p>
+            <picture> 
+                <source srcset="../imgs/arcana-mini-imgs/ArcanaMiniSitemap.jpg" media="(min-width: 600px)"> 
+                <img class="rounded-corner" src="../imgs/arcana-mini-imgs/ArcanaMiniSitemap-m.jpg" alt="Mobile app mockup" loading=“lazy” decoding=“async”> 
+            </picture>
+        </div>
 
+        <div class="flex column body-item">
             <h5>Aesthetic Experimentation</h5>
             <p>Initially, I planned to reuse the design from a previous prototype and focus on development. But 
                 after receiving critique, I realized this was a chance to create a visual identity that better fit 
                 the app’s purpose.</p>
             <p>The first iteration featured a bold, boxy style I found visually interesting, but it didn’t align with
                  the calm, reflective purpose of the app. </p>
+            <picture> 
+                <source srcset="../imgs/arcana-mini-imgs/ArcanaMiniStyle1.jpg" media="(min-width: 600px)"> 
+                <img class="rounded-corner" src="../imgs/arcana-mini-imgs/ArcanaMiniStyle1-m.jpg" alt="Mobile app mockup" loading=“lazy” decoding=“async”> 
+            </picture>
+        </div>
+        <div class="flex column body-item">
             <p>The next version moved toward a softer, more modern look—one that felt more approachable and emotionally
                  supportive. This process taught me how important it is for design to reflect the emotional context of 
                  a product, especially one centered around personal reflection.</p>
@@ -108,6 +127,10 @@
                  ended up with a very different experience—one I hadn’t intentionally designed. Realizing this pushed
                   me to consider responsive layouts more seriously and ensure the design felt consistent and intentional
                    across devices.</p>
+            <picture> 
+                <source srcset="../imgs/arcana-mini-imgs/ArcanaMiniStyle2.jpg" media="(min-width: 600px)"> 
+                <img class="rounded-corner" src="../imgs/arcana-mini-imgs/ArcanaMiniStyle2-m.jpg" alt="Mobile app mockup" loading=“lazy” decoding=“async”> 
+            </picture>
             
         </div>
 
@@ -117,17 +140,26 @@
             <h4>Key Features</h4>
 
             <div class="flex row">
-                <div class="flex column body-item">
+                <div class="flex column body-item two-column-item">
                     <h5>Journal Reflections</h5>
                     <p>After each reading, users are prompted to capture a photo of their tarot spread, followed by 
                         space to write a personal reflection. Special options allow users to timestamp the entry with
                          today’s date or backdate it for past readings. This flexible flow makes it easy to log 
                          meaningful moments without pressure—just snap, reflect, and save.</p>
                 </div>
-                <!-- VIDEO! -->
+                <div class="two-column-item">
+                    <video class="arcanamini-video rounded-corner" preload="auto" autoplay loop muted playsinline >
+                        <source src="../imgs/arcana-mini-imgs/Reflections.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
             <div class="flex row">
-                <div class="flex column body-item">
+                <div class="two-column-item">
+                    <video class="arcanamini-video rounded-corner" preload="auto" autoplay loop muted playsinline >
+                        <source src="../imgs/arcana-mini-imgs/Calendar.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="flex column body-item two-column-item">
                     <h5>Reflection Calendar</h5>
                     <p>This page offers two tabs: a calendar view and a list view. In the calendar view, users 
                         can browse by month, with highlighted dates indicating days with saved reflections. Tapping
@@ -136,26 +168,35 @@
                          reflection card displays a photo preview (if added), the date, title, and a text 
                          snippet, making it easy to revisit past readings and observe emotional patterns over time.</p>
                 </div>
-                <!-- VIDEO! -->
+                
             </div>
             <div class="flex row">
-                <div class="flex column body-item">
+                <div class="flex column body-item two-column-item">
                     <h5>Card Lookup</h5>
                     <p>Quickly search or browse the full 78‑card tarot deck. Each card page shows concise upright
                          and reversed meanings so readers can spend less time flipping through guidebooks and more
                           time interpreting the spread.</p>
                 </div>
-                <!-- VIDEO! -->
+                <div class="two-column-item">
+                    <video class="arcanamini-video rounded-corner" preload="auto" autoplay loop muted playsinline >
+                        <source src="../imgs/arcana-mini-imgs/CardLookup.mp4" type="video/mp4">
+                    </video>
+                </div>
             </div>
             <div class="flex row">
-                <div class="flex column body-item">
+                <div class="two-column-item">
+                    <video class="arcanamini-video rounded-corner" preload="auto" autoplay loop muted playsinline >
+                        <source src="../imgs/arcana-mini-imgs/Methodology.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="flex column body-item two-column-item">
                     <h5>Methodology Library</h5>
                     <p>A dedicated “Why & How” hub explains tarot fundamentals—shuffle rituals, common spreads, 
                         card‑pair relationships, and ethical reading tips. Clear, bite‑sized articles let beginners 
                         build confidence while giving seasoned readers a handy reference they can dip into between
                          sessions.</p>
                 </div>
-                <!-- VIDEO! -->
+                
             </div>
         </div>
 
@@ -204,8 +245,12 @@
                   new team. More importantly, it taught me how to respond when things don’t go according to plan:
                    with resilience, creativity, and a deepened trust in my own skills.</p>
 
-            <!-- ADD LINK TO PROTOTYPE! -->
-            <p>You can find the working figma prototype here: </p>
+            <a href="https://www.figma.com/proto/f4AN3eDZowTdrkUukAXeG3/Serge-Project---Team-Blue--Arcana-Mini-?page-id=1238%3A871&node-id=1238-2453&p=f&viewport=288%2C214%2C0.03&t=mNOUFX6PeUq6yrCs-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1238%3A2451" target="_blank">
+                <div class="button flex row">
+                    <p>View the Figma prototype</p>
+                    <img class="arrow" src="../imgs/icons/arrow.svg">
+                </div>  
+            </a>
         </div>
     </div>
     
