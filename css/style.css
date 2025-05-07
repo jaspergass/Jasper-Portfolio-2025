@@ -156,10 +156,14 @@ a {
     width:fit-content;
 }
 
-button:hover{
+.button:hover{
     cursor:none;
+    color:white;
+    background-color: black;
 }
-
+.button:hover svg path{
+    fill:white;
+}
 /* back to top button */
 #myBtn {
     display: none;
@@ -173,12 +177,13 @@ button:hover{
     border:solid black 0.085em;
     border-radius: 0.6em;
     font-size:calc(0.8em + 0.3vw);
-  }
+}
   
-  #myBtn:hover {
+#myBtn:hover {
     background-color: black;
     color:white;
-  }
+}
+
 /* ------------ Flexbox ------------*/
 
 .flex{

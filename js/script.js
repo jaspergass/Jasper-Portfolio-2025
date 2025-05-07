@@ -2,7 +2,7 @@
 //Cursor
 document.addEventListener("DOMContentLoaded", function(event) {
   var cursor = document.querySelector(".cursor");
-  var links = document.querySelectorAll("a");
+  var links = document.querySelectorAll("a, button");
   var initCursor = false;
 
   for (var i = 0; i < links.length; i++) {
@@ -76,3 +76,16 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
+// change arrow color on button hover
+const button = document.querySelector('.button');
+const arrowImg = button.querySelector('.arrow');
+
+button.addEventListener('mouseenter', () => {
+    arrowImg.src = '../imgs/icons/arrow-white.svg';
+});
+
+button.addEventListener('mouseleave', () => {
+    arrowImg.src = '../imgs/icons/arrow.svg';
+});
