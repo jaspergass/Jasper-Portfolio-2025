@@ -1,67 +1,35 @@
-// // Collapsed menu
+document.querySelectorAll('.collapsible-section').forEach(section => {
+  const button = section.querySelector('.about-title');
+  const content = section.querySelector('.about-content');
+  const star = section.querySelector('.star-icon');
 
-// function toggleAboutContent() {
-//     const box = document.getElementById("aboutContent");
-//     const icon = document.getElementById("star-icon");
+  button.addEventListener('click', () => {
+    const isExpanded = content.classList.contains('expanded');
 
-  
-//     if (box.classList.contains("expanded")) {
-//       // COLLAPSE
-//       box.style.height = box.scrollHeight + "px"; // Set to current full height first
-//       requestAnimationFrame(() => {
-//         box.style.height = "0px"; // Then animate to collapsed
-//         box.style.padding = "0 1em";
-//         box.style.borderBottom = "0em";
-//         box.classList.remove("expanded");
-//         icon.classList.remove("rotated");
-//       });
-//     } else {
-//       // EXPAND
-//       box.style.height = box.scrollHeight + "px"; // Start animation
-//       box.classList.add("expanded");
-//       box.style.padding = "1em";
-//       box.style.borderBottom = "0.09em solid black";
-//       icon.classList.add("rotated");
-  
-//       // After transition ends, let it auto-grow with content
-//       box.addEventListener("transitionend", function handler() {
-//         box.style.height = "auto";
-//         box.removeEventListener("transitionend", handler);
-//       });
-//     }
-//   }
-
-function toggleAboutContent(button) {
-    const section = button.closest(".collapsible-section");
-    const box = section.querySelector(".about-box");
-    const icon = button.querySelector("img");
-  
-    if (box.classList.contains("expanded")) {
-      box.style.height = box.scrollHeight + "px";
-      requestAnimationFrame(() => {
-        box.style.height = "0px";
-        box.style.padding = "0 1em";
-        box.classList.remove("expanded");
-        icon.classList.remove("rotated");
-      
-        // After transition ends, THEN remove border-bottom
-        box.addEventListener("transitionend", function handler(e) {
-          if (e.propertyName === "height") {
-            box.style.borderBottom = "0em";
-            box.removeEventListener("transitionend", handler);
-          }
-        });
-      });
+    if (isExpanded) {
+      // COLLAPSE
+      content.style.maxHeight = content.scrollHeight + 'px'; // Fix height
+      content.offsetHeight; // Force reflow
+      content.style.maxHeight = '0px';
+      content.classList.remove('expanded');
+      star.classList.remove('rotated');
     } else {
-      box.style.height = box.scrollHeight + "px";
-      box.classList.add("expanded");
-      box.style.padding = "1em";
-      box.style.borderBottom = "0.09em solid black";
-      icon.classList.add("rotated");
-  
-      box.addEventListener("transitionend", function handler() {
-        box.style.height = "auto";
-        box.removeEventListener("transitionend", handler);
-      });
+      // EXPAND
+      content.classList.add('expanded');
+      content.style.maxHeight = content.scrollHeight + 'px';
+      star.classList.add('rotated');
     }
-  }
+  });
+
+  // Cleanup after transition ends
+  content.addEventListener('transitionend', (e) => {
+    if (!content.classList.contains('expanded')) {
+      // Keep the thin line visible
+      content.style.border = 'none';
+      content.style.borderTop = '0.09em solid black';
+    } else {
+      // Allow natural height after opening
+      content.style.maxHeight = 'none';
+    }
+  });
+});

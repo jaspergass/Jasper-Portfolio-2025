@@ -402,57 +402,46 @@ footer{
 /* ------------ About page ------------*/
 .about-title{
     justify-content: space-between;
-}
-.about-title-box{
-    width:100%;
-}
-#star-button{
     border: none;
     background-color: transparent;
     margin:0;
     padding:0;
-    align-content: center;
 }
+
 /* Rotation transition */
-#star-icon {
+.star-icon {
     transition: transform 0.4s ease-out;
 }
 
 /* When active, rotate 45 degrees */
-#star-icon.rotated {
+.star-icon.rotated {
     transform: rotate(45deg);
 }
 
-.about-description{
-    padding: 1em;
-    border:0.09em solid black;
-}
-
-.about-box {
-    height: 0; /* show as a line when collapsed */
+.about-content {
     overflow: hidden;
-    border: 0.09em solid black;
-    border-bottom:0em;
-    border-radius: 0.5em;
-    padding: 0 1em; /* no padding when collapsed */
-    /* opacity: 0; */
-    transition: 
-      height 0.5s ease,
-      padding 0.5s ease,
-      opacity 0.3s ease 0.2s;
-}
+    max-height: 0;
+    padding: 0 1em;
+    border-top: 0.09em solid black; /* initial thin line */
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0.75em 0.75em 0 0;
+    transition:
+      max-height 0.4s ease,
+      padding 0.3s ease,
+      border 0.3s ease,
+      border-radius 0.3s ease;
+  }
   
-/* Expanded state */
-.about-box.expanded {
-    height: auto; /* let content define the height */
+  .about-content.expanded {
     padding: 1em;
-    opacity: 1;
-    border-bottom:0.09em solid black;
-    transition: 
-      height 0.5s ease,
-      padding 0.5s ease,
-      opacity 0.4s ease;
-}
+    border: 0.09em solid black;
+    border-radius: 0.75em;
+  }
+  
+ 
+  
 
 /* ------------ Responsivity ------------*/
 @media(max-width:30em){
