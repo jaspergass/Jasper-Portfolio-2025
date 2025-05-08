@@ -215,10 +215,11 @@ a {
 nav{
 	position:fixed;
 	width:100%;
+    height:fit-content;
 	top:0;
     padding: 0.8vw 0em 0.8vw 0em;
     color:black;
-    background-color: white, 99%;
+    background: rgba(255, 255, 255, 0.5);
     z-index:3;
     justify-content: space-between;
     -webkit-backdrop-filter: blur(8px);
