@@ -406,7 +406,7 @@ footer{
 .about-title-box{
     width:100%;
 }
-#star-button{
+.star-button{
     border: none;
     background-color: transparent;
     margin:0;
@@ -414,12 +414,11 @@ footer{
     align-content: center;
 }
 /* Rotation transition */
-#star-icon {
+.star-icon {
     transition: transform 0.4s ease-out;
 }
-
 /* When active, rotate 45 degrees */
-#star-icon.rotated {
+.star-icon.rotated {
     transform: rotate(45deg);
 }
 
