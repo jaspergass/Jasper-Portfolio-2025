@@ -221,6 +221,7 @@ nav{
     background-color: white, 99%;
     z-index:3;
     justify-content: space-between;
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     border-bottom: 0.09em solid black;
     opacity: 0;
