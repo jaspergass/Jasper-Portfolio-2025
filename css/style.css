@@ -76,9 +76,8 @@ img{
     border: solid black 0.09em;
 }
 .arrow{
-    width:1em;
-    height:auto;
-
+    width: 1em;
+    height: auto;
 }
 .social-icon{
     width: calc(1.8em + 0.4vw);
@@ -167,7 +166,7 @@ a {
     color:white;
     background-color: black;
 }
-.button:hover svg path{
+.button:hover path{
     fill:white;
 }
 /* back to top button */

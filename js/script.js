@@ -81,15 +81,3 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-
-// change arrow color on button hover
-const button = document.querySelector('.button');
-const arrowImg = button.querySelector('.arrow');
-
-button.addEventListener('mouseenter', () => {
-    arrowImg.src = '../imgs/icons/arrow-white.svg';
-});
-
-button.addEventListener('mouseleave', () => {
-    arrowImg.src = '../imgs/icons/arrow.svg';
-});
