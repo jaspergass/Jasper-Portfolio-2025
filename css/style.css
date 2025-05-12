@@ -84,6 +84,7 @@ img{
     width: calc(1.8em + 0.4vw);
 }
 hr{
+    border: none;
     border-top: solid black 0.09em;
     width:100%;
 }
@@ -144,6 +145,9 @@ a:hover{
 }
 
 /* ------------ Interactive Elements ------------*/
+button:hover{
+    cursor:none;
+}
 .button{
     padding:0.5em 1em 0.5em 1em;
     border:solid black 0.09em;
@@ -403,47 +407,56 @@ footer{
 
 /* ------------ About page ------------*/
 .about-title{
+    width: 100%;
     justify-content: space-between;
+    align-items: center;
+    background: none;
     border: none;
-    background-color: transparent;
-    margin:0;
-    padding:0;
+    padding: 0;
+    cursor: pointer;
 }
-
-/* Rotation transition */
 .star-icon {
-    transition: transform 0.4s ease-out;
+    transition: transform 0.3s ease;
 }
-
-/* When active, rotate 45 degrees */
 .star-icon.rotated {
     transform: rotate(45deg);
 }
-
-.about-content {
-    overflow: hidden;
+.about-content-box {
+    border: solid black 0.09em;
+    
+}
+.content {
+    padding: 0 18px;
     max-height: 0;
-    padding: 0 1em;
-    border-top: 0.09em solid black; /* initial thin line */
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    border-radius: 0.75em 0.75em 0 0;
-    transition:
-      max-height 0.4s ease,
-      padding 0.3s ease,
-      border 0.3s ease,
-      border-radius 0.3s ease;
-  }
-  
-  .about-content.expanded {
-    padding: 1em;
-    border: 0.09em solid black;
-    border-radius: 0.75em;
-  }
-  
- 
-  
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border: solid #000000 0.09em;
+    border-top:none;
+    border-radius: 0.6em;
+    gap:1em;
+}
+.content p:first-child {
+  margin-top: 1em; 
+}
+.content p:last-child {
+  margin-bottom: 1em;
+}
+
+.about-divider{
+    border-top: solid #000000 0.09em;
+    width:100%;
+}
+
+.collapsible {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
 
 /* ------------ Responsivity ------------*/
 @media(max-width:30em){
@@ -494,4 +507,8 @@ footer{
         -ms-flex-direction: column;
         flex-direction: column;
     }
+}
+
+.collapsible-section {
+    width: 100%;
 }

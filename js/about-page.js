@@ -1,35 +1,26 @@
-document.querySelectorAll('.collapsible-section').forEach(section => {
-  const button = section.querySelector('.about-title');
-  const content = section.querySelector('.about-content');
-  const star = section.querySelector('.star-icon');
+document.addEventListener("DOMContentLoaded", function () {
+  var coll = document.getElementsByClassName("collapsible");
 
-  button.addEventListener('click', () => {
-    const isExpanded = content.classList.contains('expanded');
+  for (let i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      var content = this.nextElementSibling;
+      var icon = this.querySelector(".star-icon");
 
-    if (isExpanded) {
-      // COLLAPSE
-      content.style.maxHeight = content.scrollHeight + 'px'; // Fix height
-      content.offsetHeight; // Force reflow
-      content.style.maxHeight = '0px';
-      content.classList.remove('expanded');
-      star.classList.remove('rotated');
-    } else {
-      // EXPAND
-      content.classList.add('expanded');
-      content.style.maxHeight = content.scrollHeight + 'px';
-      star.classList.add('rotated');
-    }
-  });
+      if (content.style.maxHeight) {
+        setTimeout(function () {
+          content.style.borderTop = "none";
+        }, 180);
+        content.style.maxHeight = null;
+        if (icon) icon.classList.remove("rotated");
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        setTimeout(function () {
+          content.style.borderTop = "0.09em solid #000000";
+        }, 20);
+        if (icon) icon.classList.add("rotated");
+      }
 
-  // Cleanup after transition ends
-  content.addEventListener('transitionend', (e) => {
-    if (!content.classList.contains('expanded')) {
-      // Keep the thin line visible
-      content.style.border = 'none';
-      content.style.borderTop = '0.09em solid black';
-    } else {
-      // Allow natural height after opening
-      content.style.maxHeight = 'none';
-    }
-  });
+      this.classList.toggle("active");
+    });
+  }
 });
