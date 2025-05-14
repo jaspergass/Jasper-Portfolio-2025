@@ -144,6 +144,9 @@ a:hover{
 }
 
 /* ------------ Interactive Elements ------------*/
+button{
+    color:#000000;
+}
 button:hover{
     cursor:none;
 }
@@ -460,8 +463,9 @@ footer h5{
     padding: 0;
     cursor: pointer;
 }
-
-
+.collapsible h5{
+    color: #000000;
+}
 /* ------------ Responsivity ------------*/
 @media(max-width:30em){
     .nav-right .expanded{
